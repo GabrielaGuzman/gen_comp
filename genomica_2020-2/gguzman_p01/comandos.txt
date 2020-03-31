@@ -1,0 +1,136 @@
+
+mkadir gguzmán_p01
+touch comandos.txt
+echo %0 #bash
+
+ mkdir data/ && mkdir filtered/ && mkdir raw_data/ && mkdir meta/ && mkdir scripts/ mkdir figures/ && mkdir archive
+ mv filtered/ data && mv raw_data/ data
+
+# Parte II
+nano delay.sh
+#!/bin/bash
+echo "Después de la Parte I. necesito 1/2 minuto de descanso, que son exactamente 30 segundos."
+
+echo "Ahora sí, con todo!"
+^X
+./delay.sh
+
+ls -l delay.sh 
+chmod 777 delay.sh
+man sleep
+nano delay.sh
+#!/bin/bash
+echo "Después de la Parte I. necesito 1/2 minuto de descanso, que son exactamente 30 segundos."
+sleep 30
+echo "Ahora sí, con todo!"
+^X
+./delay.sh
+
+# 4. 
+nano delay.sh
+#!/bin/bash
+echo "Después de la Parte I. necesito 1/2 minuto de descanso, que son exactamente 30 segundos."
+sleep 300
+echo "Ahora sí, con todo!"
+^X
+./delay.sh
+^C #para detener el proceso
+
+# Parte III
+# Resumen de covid-19
+Familia Corovidae
+tres familias= alpha, delta, gamma ( mamíferos). Relacionado a los coronavirus de murciélagos, pero con hospedero intermedio
+nucleocapside, glicoprotepina de membrana(M), protepina espicula glucosilada(s), protepina d ela envolutra (EP). De 20-20 nm. el ectodominio S2 de S es el encargado de l recepción en las células (en la piel no hay receptor)
+# Fucnión de Sars CoV-2 spike ectodomain structure
+
+
+#para mover los archivos
+mv sequence_1.FASTA Windows(C:)/Gabriela/gguzman_p01/data/raw_data/ 
+mv sequence_2.FASTA Windows(C:)/Gabriela/gguzman_p01/data/raw_data/ 
+mv sequence_3.FASTA Windows(C:)/Gabriela/gguzman_p01/data/raw_data/ 
+mv sequence.FASTA Windows(C:)/Gabriela/gguzman_p01/data/raw_data/ 
+mv sequence.gff3 Windows(C:)/Gabriela/gguzman_p01/data/raw_data/ 
+mv sra_data.fasta.gz Windows(C:)/Gabriela/gguzman_p01/data/raw_data/ 
+mv sra_data.fastq.gz Windows(C:)/Gabriela/gguzman_p01/data/raw_data/ 
+
+#Parte IV
+# ligas simbólicas
+ln -s sequence.FASTA/data/filtered sequence.faa
+ln -s sequence.gff3/data/filtered sequence_gff3.faa
+ln -s sequence_1.FASTA/data/filtered sequence_1.faa
+ln -s sequence_2.FASTA/data/filtered sequence_2.faa
+ln -s sequence_3.FASTA/data/filtered sequence_3.faa
+ln -s sra_data.fasta.gz/data/filtered sra_data.faa.gz
+ln -s sra_data.fastq.gz/data/filtered sra_data.faq.gz
+#2.
+mkdir proteins && mv sequence_1.faa proteins
+mv sequence_2.faa proteins
+mv sequence_3.faa proteins
+#3. 
+cd proteins
+touch glycoproteins.faa
+# 4.
+head -n sequence_1.fasta
+>pdb|6VYB|C Chain C, spike glycoprotein
+MGILPSPGMPALLSLVSLLSVLLMGCVAETGTQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHST
+QDLFLPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVN
+
+head -n sequence_2.fasta
+>pdb|6VYB|B Chain B, spike glycoprotein
+MGILPSPGMPALLSLVSLLSVLLMGCVAETGTQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHST
+QDLFLPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVN
+
+head -n sequence_3.fasta
+>pdb|6VYB|A Chain A, spike glycoprotein
+MGILPSPGMPALLSLVSLLSVLLMGCVAETGTQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHST
+QDLFLPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVN
+
+#Aquí va el comando para pegar
+#5. 
+head -n 6 sequence.fasta
+>NC_045512.2 Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome
+ATTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAACTTTCGATCTCTTGTAGATCTGTTCTCTAAA
+CGAACTTTAAAATCTGTGTGGCTGTCACTCGGCTGCATGCTTAGTGCACTCACGCAGTATAATTAATAAC
+TAATTACTGTCGTTGACAGGACACGAGTAACTCGTCTATCTTCTGCAGGCTGCTTACGGTTTCGTCCGTG
+TTGCAGCCGATCATCAGCACATCTAGGTTTCGTCCGGGTGTGACCGAAAGGTAAGATGGAGAGCCTTGTC
+CCTGGTTTCAACGAGAAAACACACGTCCAACTCAGTTTGCCTGTTTTACAGGTTCGCGACGTGCTCGTAC
+
+
+zless sra_data.fasta.gz | cat
+zless sra_data.fasta.gz | head -n 10
+>SRR11241254.1.1 1 length=40
+GTTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAAC
+>SRR11241254.2.1 2 length=40
+GTTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAAC
+>SRR11241254.3.1 3 length=40
+GTTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAAC
+>SRR11241254.4.1 4 length=40
+GTTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAAC
+>SRR11241254.5.1 5 length=40
+GTTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAAC
+
+zless sra_data.fastq.gz | head -n 10
+@SRR11241254.1.1 1 length=40
+GTTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAAC
++SRR11241254.1.1 1 length=40
+GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+@SRR11241254.2.1 2 length=40
+GTTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAAC
++SRR11241254.2.1 2 length=40
+GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+@SRR11241254.3.1 3 length=40
+GTTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAAC
+
+# 8.
+# .faa es un archivo de formato fasta para proteínas, mientras que el formato .fastqc también es para nuleótidos, pero muestra además el puntaje de calidad de la secuencia.
+
+#9.
+less sequence.gff3
+less -S sequence.gff3
+# con less los parte de los datos de un gen aparecen en el reglón de abajo, mientras que con less -S, todo sale un mismo renglón.
+
+#10.= 11 genes
+awk '$3 == "gene" {print $3}' sequence.gff3 | wc -l
+
+# Parte IV
+
