@@ -1,19 +1,19 @@
 # Comandos de la Práctica 03
 ## Gabriela Guzmán Favila
 
-01. mkdir gguzman_p03
-02. touch comandos_p03.md
+01. `mkdir gguzman_p03
+02. `touch comandos_p03.md
 
 ## Parte I.
 
- 1.1 ¿A qué organismo pertenece? *Mycoplasma genitalium*
+ 1.1 **¿A qué organismo pertenece?** *Mycoplasma genitalium*
  
- 1.2 ¿Es un gen o una región genómica de importancia? Es una parte del gen que codifica el ARNr 16s
+ 1.2 **¿Es un gen o una región genómica de importancia?** Es una parte del gen que codifica el ARNr 16s
  
- 1.3 ¿Qué es un marcador molecular? Son regiones de ADN utilizadas para estudios taxonómicos y filogenéticos,debido a que presentan 
+ 1.3 **¿Qué es un marcador molecular?** Son regiones de ADN utilizadas para estudios taxonómicos y filogenéticos,debido a que presentan 
  características como una variabilidad significativa a nivel de especie y ubicarse entre sitios conservados (Valenzuela-González et al., 2015).
  
- 1.4 ¿Cuál es la importancia de este tipo de marcador en particular? el ADN ribosomal 16s se encuentra en todos los organismos, con 
+ 1.4 **¿Cuál es la importancia de este tipo de marcador en particular?** el ADN ribosomal 16s se encuentra en todos los organismos, con 
  la misma función. El gen contiene tanto regiones de alta variabilidad, que permiten clasificar a nivel de especie y cepa; así como 
  regiones conservadas, con las que se pueden implementar primers universales (Valenzuela-González et al., 2015).
 
