@@ -47,3 +47,7 @@ número de cotings cuya suma de su longitud es N50.
 
 
 ## Referencias 
+
+Aguilar-Bultet, L. y Falquet, L. (2015) Secuenciación y ensamblaje de *novo* de genomas bacterianos: una alternativa para el estudio de nuevos patógenos.*Revista de Salud Animal*, 37(2). 
+
+Donkin, I., Versteyhe, S., Ingerslev, L., Qian, K. Mechta, M., Nordkap, L., Mortensen, B., Appel., E., Jorgensen, N., Dristiansen, V., Hansen, T., Workman, C., Zierath, J. and Barres, R.(2017) Obesity and Baratric Surgery Drive Epigenetic Variation of Spermatozoa in Humans. *Cell Metabolism*, 23(2), 369-378.
