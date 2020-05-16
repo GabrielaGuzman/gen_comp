@@ -1,7 +1,7 @@
 # Comandos de la Práctica 03
 ## Gabriela Guzmán Favila
 
-01. `mkdir gguzman_p03
+01. ``mkdir gguzman_p03``
 02. `touch comandos_p03.md
 
 ## Parte I.
